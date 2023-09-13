@@ -6,9 +6,9 @@ const gameBoard = document.querySelector('#game-board');
 const cover = document.querySelector('#cover');
 
 /* 순위 관련 요소 */
-const easyTbody = document.querySelector("#easy-table > tbody");
-const normalTbody = document.querySelector("#normal-table > tbody");
-const hardTbody = document.querySelector("#hard-table > tbody");
+// const easyTbody = document.querySelector("#easy-table > tbody");
+// const normalTbody = document.querySelector("#normal-table > tbody");
+// const hardTbody = document.querySelector("#hard-table > tbody");
 
 
 /* 모달 관련 요소 */
@@ -181,9 +181,9 @@ saveRecord.addEventListener('click', e => {
     if(result > 0){
       myModal.hide(clearModal);
       playerName.value ="";
-      seletRank(easyTbody, '쉬움');
-      seletRank(normalTbody, '보통');
-      seletRank(hardTbody, '어려움');
+      // seletRank(easyTbody, '쉬움');
+      // seletRank(normalTbody, '보통');
+      // seletRank(hardTbody, '어려움');
     }
 
   })
@@ -221,8 +221,8 @@ function seletRank(tbody, diff){
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  seletRank(easyTbody, '쉬움');
-  seletRank(normalTbody, '보통');
-  seletRank(hardTbody, '어려움');
-})
+// document.addEventListener("DOMContentLoaded", () => {
+//   seletRank(easyTbody, '쉬움');
+//   seletRank(normalTbody, '보통');
+//   seletRank(hardTbody, '어려움');
+// })
