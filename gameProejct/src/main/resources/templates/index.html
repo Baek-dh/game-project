@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who`s Faster?</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/whosfaster.css">
+</head>
+<body>
+
+  <header>
+    <strong>Who`s Faster?</strong>
+  </header>
+
+  <nav>
+    <div class="container top-btn-area">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-success" id="easy-btn">쉬움</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-warning" id="normal-btn">보통</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-danger" id="hard-btn">어려움</button>
+        </div>
+      </div>
+
+      <div class="row"></div>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="timer-container">
+        <span id="timer">00 : 00</span>
+      </div>
+  
+      <div class="container game-board" id="game-board">
+        <div id="cover">난이도를 선택해주세요</div>
+        <!-- <div class="row">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+          <div class="col">4</div>
+          <div class="col">5</div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="rank-area">
+      <article class="rank">
+        <h3>쉬움</h3>
+        <table class="table" id="easy-table">
+          <thead>
+            <tr class="table-success">
+              <th scope="col">순위</th>
+              <th scope="col">이름</th>
+              <th scope="col">기록</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>테스트</td>
+              <td>04 : 99</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="rank">
+        <h3>보통</h3>
+        <table class="table" id="normal-table">
+          <thead>
+            <tr class="table-warning">
+              <th scope="col">순위</th>
+              <th scope="col">이름</th>
+              <th scope="col">기록</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </article>
+      <article class="rank">
+        <h3>어려움</h3>
+        <table class="table" id="hard-table">
+          <thead>
+            <tr class="table-danger">
+              <th scope="col">순위</th>
+              <th scope="col">이름</th>
+              <th scope="col">기록</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+  </main>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="claer-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">CLEAR!!!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          난이도 : <span id="difficulty"></span>
+          <br>
+          기록 : <span id="record"></span>
+        </div>
+        <div class="modal-footer">
+          <input type="text" id="player-name" placeholder="이름을 입력하세요.">
+          <button type="button" class="btn btn-primary" id="save-record">기록 저장</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">기록 X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <hr>
+
+
+
+  <footer>
+이 페이지에는 (주)이키나게임즈가 제공한 'Ramche(램체)'가 적용되어 있습니다.
+'Ramche(램체)' 서체를 사용한 온/오프라인, 상품, 광고 등 모든 종류의 창작물은 (주)이키나게임즈 프로모션을 위해 활용될 수 있습니다.
+이를 원치 않는 사용자는 언제든지 당사에 협의를 요청하실 수 있습니다.
+문의 : (주)이키나게임즈 (https://www.ikinagames.com/ admin@ikinagames.com )
+
+자이언츠체의 지적재산권은 모두 (주)롯데자이언츠에 있습니다.
+자이언츠체는 무료로 사용할 수 있으며, 본 사용규정 안내 전문을 포함하여 재배포하실 수 있습니다.
+정확한 사용 조건은 아래 라이선스 전문을 참고하시기 바랍니다
+문의 : 롯데자이언츠 (https://www.giantsclub.com/html/?pcode=1007)
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="/js/whosfaster.js"></script>
+</body>
+</html>

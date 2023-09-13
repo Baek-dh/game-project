@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="my.bdh.game.wf.model.mapper.WhosFasterMapper">
+	
+	<insert id="insertRecord">
+		INSERT INTO WHOS_FASTER 
+		VALUES(SEQ_FASTER_NO.NEXTVAL, #{fasterName}, #{fasterRecord}, #{difficulty})
+	</insert>
+	
+	<select id="selectRank" resultType="Player">
+		
+		SELECT * FROM (
+			SELECT * FROM WHOS_FASTER
+			WHERE DIFFICULTY = #{difficulty}
+			ORDER BY FASTER_RECORD ASC
+		)
+		<![CDATA[  
+		WHERE ROWNUM <= 10
+		]]>
+	</select>
+	
+</mapper>

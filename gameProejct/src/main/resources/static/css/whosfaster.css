@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Ramche';
+  src: url('Ramche.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Giants-Inline';
+  src: url('Giants-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'Ramche';
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+header{ 
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+header > strong{
+  font-size: 36px;
+}
+
+footer{
+  margin: 0 10px;
+  color : gray;
+  font-size: 9px;
+  white-space: pre-wrap;
+}
+
+
+/* ----------------- top-btn-area -----------------*/
+
+.top-btn-area{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.top-btn-area button{
+  width: 100px;
+  color: white;
+}
+
+
+/* ----------------- timer-container ----------------- */
+.timer-container{
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#timer{
+  font-family: 'Giants-Inline';
+}
+
+.fail{color : red;}
+.success{color : green;}
+
+/* ----------------- game-board ----------------- */
+
+.game-board{
+  text-align: center;
+  border: 3px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  min-height: 110px;
+  position: relative;
+}
+
+.game-board .row{
+  justify-content: space-evenly;
+}
+
+.game-board .col{
+  border: 2px solid gray;
+  border-radius: 15%;
+  max-width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.game-board .row:last-of-type > .col{
+  margin-bottom: 0;
+}
+
+.game-board .col:not(.check):hover{
+  background-color: yellow;
+}
+
+.game-board .col:active{
+  background-color: orange;
+}
+
+/* ----------------- game-board cover----------------- */
+
+#cover{
+  width: 304px;
+  height: 100%; /* 110, 350, 590 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+
+
+
+/* 순서대로 알맞게 클릭한 경우 */
+.check{
+  background-color: steelblue;
+  color: white;
+}
+
+/* 모달창 */
+#claer-modal .modal-header, #claer-modal .modal-body{
+  font-size: 1.5em;
+}
+
+#player-name{
+  margin: 0;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+/* 순위표 */
+.rank-area{
+  display: flex;
+}
+.rank{
+  width: 170px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.rank * { font-size: 12px; }
+.rank h3 { font-size: 16px; }
+
