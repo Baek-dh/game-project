@@ -21,7 +21,13 @@
           <button type="button" class="btn btn-success" id="easy-btn">쉬움</button>
         </div>
         <div class="col">
+          <button type="button" class="btn btn-info" id="little-easy-btn">살짝쉬움</button>
+        </div>
+        <div class="col">
           <button type="button" class="btn btn-warning" id="normal-btn">보통</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary" id="little-hard-btn">살짝어려움</button>
         </div>
         <div class="col">
           <button type="button" class="btn btn-danger" id="hard-btn">어려움</button>
@@ -36,6 +42,13 @@
     <section>
       <div class="timer-container">
         <span id="timer">00 : 00</span>
+
+        <article class="rank-btn-area">
+          <button type="button" class="btn btn-outline-primary" 
+            data-bs-toggle="modal" data-bs-target="#ranking-modal">
+            Ranking
+          </button>
+        </article>
       </div>
   
       <div class="container game-board" id="game-board">
@@ -49,56 +62,6 @@
         </div> -->
       </div>
     </section>
-<!-- 
-    <section class="rank-area">
-      <article class="rank">
-        <h3>쉬움</h3>
-        <table class="table" id="easy-table">
-          <thead>
-            <tr class="table-success">
-              <th scope="col">순위</th>
-              <th scope="col">이름</th>
-              <th scope="col">기록</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>1</th>
-              <td>테스트</td>
-              <td>04 : 99</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article class="rank">
-        <h3>보통</h3>
-        <table class="table" id="normal-table">
-          <thead>
-            <tr class="table-warning">
-              <th scope="col">순위</th>
-              <th scope="col">이름</th>
-              <th scope="col">기록</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </article>
-      <article class="rank">
-        <h3>어려움</h3>
-        <table class="table" id="hard-table">
-          <thead>
-            <tr class="table-danger">
-              <th scope="col">순위</th>
-              <th scope="col">이름</th>
-              <th scope="col">기록</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </article>
-    </section> -->
 
   </main>
 
@@ -127,6 +90,104 @@
   </div>
 
   
+  <!-- 랭킹 Modal -->
+  <div class="modal fade" id="ranking-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ranking</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <section class="rank-area row">
+            <article class="rank col-6">
+              <h3>쉬움</h3>
+              <table class="table" id="easy-table">
+                <thead>
+                  <tr class="table-success">
+                    <th scope="col">순위</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기록</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>테스트</td>
+                    <td>04 : 99</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="rank col-6">
+              <h3>살짝쉬움</h3>
+              <table class="table" id="little-easy-table">
+                <thead>
+                  <tr class="table-info">
+                    <th scope="col">순위</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기록</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="rank col-6">
+              <h3>보통</h3>
+              <table class="table" id="normal-table">
+                <thead>
+                  <tr class="table-warning">
+                    <th scope="col">순위</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기록</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="rank col-6">
+              <h3>살짝어려움</h3>
+              <table class="table" id="little-hard-table">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col">순위</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기록</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="rank col-6">
+              <h3>어려움</h3>
+              <table class="table" id="hard-table">
+                <thead>
+                  <tr class="table-danger">
+                    <th scope="col">순위</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기록</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </article>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <hr>
 
 

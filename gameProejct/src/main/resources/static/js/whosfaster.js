@@ -1,14 +1,22 @@
+/* 게임 시작 버튼 */
+
 const easyBtn = document.querySelector('#easy-btn');
+const littleEasyBtn = document.querySelector('#little-easy-btn');
 const normalBtn = document.querySelector('#normal-btn');
+const littleHardBtn = document.querySelector('#little-hard-btn');
 const hardBtn = document.querySelector('#hard-btn');
+
+
 const timer = document.querySelector('#timer');
 const gameBoard = document.querySelector('#game-board');
 const cover = document.querySelector('#cover');
 
 /* 순위 관련 요소 */
-// const easyTbody = document.querySelector("#easy-table > tbody");
-// const normalTbody = document.querySelector("#normal-table > tbody");
-// const hardTbody = document.querySelector("#hard-table > tbody");
+const easyTbody = document.querySelector("#easy-table > tbody");
+const littleEasyTbody = document.querySelector("#little-easy-table > tbody");
+const normalTbody = document.querySelector("#normal-table > tbody");
+const littleHardTbody = document.querySelector("#little-hard-table > tbody");
+const hardTbody = document.querySelector("#hard-table > tbody");
 
 
 /* 모달 관련 요소 */
@@ -42,6 +50,15 @@ easyBtn.addEventListener('click', e => {
   createBoard(10);
 });
 
+/*  살짝 쉬움 버튼 클릭 시 */
+littleEasyBtn.addEventListener('click', e => {
+  timer.innerText = "00 : 00";
+  cover.style.display = "flex";
+  difficulty = "살짝쉬움";
+  startTimer();
+  createBoard(20);
+});
+
 /* 보통 버튼 클릭 시 */
 normalBtn.addEventListener('click', e => {
   timer.innerText = "00 : 00";
@@ -49,6 +66,15 @@ normalBtn.addEventListener('click', e => {
   difficulty = "보통";
   startTimer();
   createBoard(30);
+});
+
+/* 살짝어려움 버튼 클릭 시 */
+littleHardBtn.addEventListener('click', e => {
+  timer.innerText = "00 : 00";
+  cover.style.display = "flex";
+  difficulty = "살짝어려움";
+  startTimer();
+  createBoard(40);
 });
 
 /* 어려움 버튼 클릭 시 */
@@ -221,8 +247,10 @@ function seletRank(tbody, diff){
   });
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   seletRank(easyTbody, '쉬움');
-//   seletRank(normalTbody, '보통');
-//   seletRank(hardTbody, '어려움');
-// })
+document.addEventListener("DOMContentLoaded", () => {
+  seletRank(easyTbody, '쉬움');
+  seletRank(littleEasyTbody, '살짝쉬움');
+  seletRank(normalTbody, '보통');
+  seletRank(littleHardTbody, '살짝어려움');
+  seletRank(hardTbody, '어려움');
+})
