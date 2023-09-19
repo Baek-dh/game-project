@@ -12,6 +12,7 @@ const gameBoard = document.querySelector('#game-board');
 const cover = document.querySelector('#cover');
 
 /* 순위 관련 요소 */
+const showRanking = document.querySelector("#show-ranking");
 const easyTbody = document.querySelector("#easy-table > tbody");
 const littleEasyTbody = document.querySelector("#little-easy-table > tbody");
 const normalTbody = document.querySelector("#normal-table > tbody");
@@ -247,7 +248,8 @@ function seletRank(tbody, diff){
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+
+showRanking.addEventListener("click", () => {
   seletRank(easyTbody, '쉬움');
   seletRank(littleEasyTbody, '살짝쉬움');
   seletRank(normalTbody, '보통');
