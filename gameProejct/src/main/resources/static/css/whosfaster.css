@@ -16,7 +16,7 @@
 }
 
 body{
-  height: 100vh;
+  height: 88.5vh;
   display: flex;
   flex-direction: column;
 }
@@ -44,6 +44,9 @@ footer{
   white-space: pre-wrap;
 }
 
+body > hr{
+	margin : 0;
+}
 
 /* ----------------- top-btn-area -----------------*/
 
@@ -108,7 +111,7 @@ footer{
 }
 
 #ranking-modal > .modal-dialog{
-  width: 90%;
+  width: 96%;
 }
 
 /* ----------------- game-board ----------------- */
